@@ -89,6 +89,10 @@ class MainActivity : ComponentActivity() {
                     intent.setPackage(packageName)
                     android.util.Log.d("MainActivity", "sending broadcast")
                     sendBroadcast(intent)
+                },
+                onViewImageClick = {
+                    val intent = Intent(this, ThirdActivity::class.java)
+                    startActivity(intent)
                 }
             )
         }
@@ -123,7 +127,8 @@ fun MainActivityScreen(
     onImplicitClick: () -> Unit,
     onStartServiceClick: () -> Unit,
     onBindServiceClick: () -> Unit,
-    onSendBroadcastClick: () -> Unit
+    onSendBroadcastClick: () -> Unit,
+    onViewImageClick: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -182,5 +187,13 @@ fun MainActivityScreen(
         ) {
             Text("Send Broadcast")
         }
+
+        Spacer(modifier = Modifier.height(12.dp))
+        Button(
+            onClick = onViewImageClick
+        ) {
+            Text("View Image Activity")
+        }
+
     }
 }

@@ -40,6 +40,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ThirdActivity"
+            android:exported="false" />
+
         <service
             android:name=".MyService"
             android:exported="false"
