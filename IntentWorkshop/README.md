@@ -1,4 +1,4 @@
-# Assignment 5 - Camera Intent and Third Activity
+# Assignment 6 - UI Automation Testing
 
 ## Device/Emulator
 
@@ -6,7 +6,7 @@ Pixel 8 Emulator
 
 ## Android OS Version
 
-API 37
+API 37.1
 
 ## Description
 
@@ -45,6 +45,16 @@ The Third Activity:
 - Displays the captured image below the button
 - Needs no CAMERA permission, because the picture is taken by the camera app rather
   than by this app
+
+## UI Automator Test
+
+UiAutomatorTest (app/src/androidTest) automatically:
+
+Presses Home and launches the app by clicking its icon in the launcher
+Clicks the "Start Activity Explicitly" button in the Main Activity
+Verifies the Second Activity displays at least one of the mobile software engineering challenges
+
+Run it from Android Studio by clicking the green arrow next to UiAutomatorTest on an emulator or device (the screen must be unlocked).
 
 ## MyService
 
